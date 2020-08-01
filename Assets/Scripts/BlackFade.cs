@@ -7,7 +7,7 @@ public class BlackFade : MonoBehaviour
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     // Speed of the black fade
-    public const float FADE_SPEED = 0.05f;
+    public const float FADE_SPEED = 0.5f;
 
     public CanvasGroup canvasGroup => GetComponent<CanvasGroup>();
 
@@ -27,7 +27,7 @@ public class BlackFade : MonoBehaviour
     IEnumerator FadeFromBlack()
     {
         while(canvasGroup.alpha > 0) {
-            canvasGroup.alpha -= FADE_SPEED;
+            canvasGroup.alpha -= Time.deltaTime/FADE_SPEED;
             yield return null;
         }
     }
@@ -38,7 +38,7 @@ public class BlackFade : MonoBehaviour
     IEnumerator FadeToBlack()
     {
         while(canvasGroup.alpha < 1) {
-            canvasGroup.alpha += FADE_SPEED;
+            canvasGroup.alpha += Time.deltaTime/FADE_SPEED;
             yield return null;
         }
     }
