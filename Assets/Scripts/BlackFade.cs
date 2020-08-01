@@ -3,28 +3,32 @@ using UnityEngine;
 
 public class BlackFade : MonoBehaviour
 {
+    public const float FADE_SPEED = 0.05f;
 
-    // Start is called before the first frame update
-    void Start()
+    public CanvasGroup canvasGroup => GetComponent<CanvasGroup>();
+
+    public void FadeController(bool fadeFrom = true) 
     {
-        StartCoroutine (FadeMe());        
+        if(fadeFrom) {
+            StartCoroutine(FadeFromBlack());
+        } else {
+            StartCoroutine(FadeToBlack());
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator FadeFromBlack()
     {
-        
-    }
-
-    IEnumerator FadeMe()
-    {
-        float fadeSpeed = 0.05F;
-
-        CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
         while(canvasGroup.alpha > 0) {
-            canvasGroup.alpha -= fadeSpeed;
+            canvasGroup.alpha -= FADE_SPEED;
             yield return null;
         }
-        
+    }
+
+    IEnumerator FadeToBlack()
+    {
+        while(canvasGroup.alpha < 1) {
+            canvasGroup.alpha += FADE_SPEED;
+            yield return null;
+        }
     }
 }
