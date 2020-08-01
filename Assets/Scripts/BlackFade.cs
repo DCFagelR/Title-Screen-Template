@@ -3,10 +3,15 @@ using UnityEngine;
 
 public class BlackFade : MonoBehaviour
 {
+
+// ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // Speed of the black fade
     public const float FADE_SPEED = 0.05f;
 
     public CanvasGroup canvasGroup => GetComponent<CanvasGroup>();
 
+    // fadeFrom: true = fadeFrom() is called
     public void FadeController(bool fadeFrom = true) 
     {
         if(fadeFrom) {
@@ -16,6 +21,9 @@ public class BlackFade : MonoBehaviour
         }
     }
 
+// ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // Black to screen
     IEnumerator FadeFromBlack()
     {
         while(canvasGroup.alpha > 0) {
@@ -24,6 +32,9 @@ public class BlackFade : MonoBehaviour
         }
     }
 
+// ----------------------------------------------------------------------------
+
+    // Screen to black
     IEnumerator FadeToBlack()
     {
         while(canvasGroup.alpha < 1) {
@@ -31,4 +42,7 @@ public class BlackFade : MonoBehaviour
             yield return null;
         }
     }
+    
+// ----------------------------------------------------------------------------
+
 }
