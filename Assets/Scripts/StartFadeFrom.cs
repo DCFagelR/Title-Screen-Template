@@ -6,12 +6,12 @@ public class StartFadeFrom : MonoBehaviour
 
     [SerializeField]
     // private GameObject fader;
-    private BlackFade fader;
+    private BlackFade _fader;
 
     // Start is called before the first frame update
     void Start()
     {
         // fader.FadeController();
-        fader.FadeController();
+        _fader.FadeController();
     }
 }
