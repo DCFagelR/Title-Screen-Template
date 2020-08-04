@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e239eaab07de1fd4792b668028d3219d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fader: {fileID: 476271686}
+  _fader: {fileID: 476271686}
 --- !u!1 &476271685
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3971363135972644312, guid: febe9243c841c9d4e937751d56ada448,
+      - m_Target: {fileID: 9036366232129076965, guid: 9dfb584244dceb041b0198dbd3202760,
           type: 3}
         m_TargetAssemblyTypeName: FadeToButton, Assembly-CSharp
         m_MethodName: OnButtonPress
@@ -1328,7 +1328,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 235
+    m_FontSize: 230
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
