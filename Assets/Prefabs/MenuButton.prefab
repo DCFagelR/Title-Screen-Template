@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 7375136749113720702}
   - component: {fileID: 7375136749113720697}
   - component: {fileID: 2098299412975934889}
+  - component: {fileID: 2284137964555356417}
   m_Layer: 5
   m_Name: MenuText
   m_TagString: Untagged
@@ -227,3 +228,16 @@ MonoBehaviour:
   m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &2284137964555356417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7375136749113720699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500e4f9ffc9c345459d2db6315a27b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeSpeed: 0.1

@@ -6,44 +6,68 @@ using UnityEngine;
 public class MenuExtender : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    
+    private GameObject MyChild => transform.GetChild(0).gameObject;
+    private Vector2 OriginalSize => GetComponent<RectTransform>().sizeDelta;
+    
+    private GameObject _childButtons;
 
-    private GameObject _myObject;
-
-    [Range(1,10)]
-    [SerializeField]
-    private int _fadeSpeed = 1;
-
-    // Start is called before the first frame update
-    void Start() {
-        _myObject = this.gameObject;
-    }
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public void ExtendMenu()
     {
-        DeactivateMenuObjects();
+        FadeMenuButtons();
+        StartCoroutine(StartMenuExtend());
     }
 
 // ----------------------------------------------------------------------------
 
-    private void DeactivateMenuObjects()
+    private void FadeMenuButtons()
     {
-        GameObject myChild = _myObject.transform.GetChild(0).gameObject;
-        GameObject childButtons = myChild.transform.GetChild(0).gameObject;
         int currChild = 0;
 
-        // while(childButtons != null) {
-        //     Debug.Log("EXISTS");
-        //     childButtons.GetComponentInChildren<TextFader>().TextFadeContoller(true);
-        //     currChild++;
-        // }
+        // fades all child buttons
+        while(currChild < MyChild.transform.childCount) {
+            _childButtons = MyChild.transform.GetChild(currChild).gameObject;
+            _childButtons.GetComponentInChildren<TextFader>().TextFadeContoller(true);
+            currChild++;
+        }
+    }
 
-        // while(true) {
-            
-        //     break;
-        // }
+// ----------------------------------------------------------------------------
 
-        // myChild.SetActive(false);
+    IEnumerator StartMenuExtend()
+    {
+        Vector2 targetSize;
+        float targetWidth = -Screen.width * GetComponent<RectTransform>().anchorMin.x;
+        float currSize;
+        float totalSizeNeeded = Vector2.Distance(OriginalSize, new Vector2(targetWidth, 0));
+        float fractionOfTotalSize = 0f;
+        float startTime = Time.time;
+
+        float speed = 800f;
+
+        // Wait for buttons to disappear before setting them inactive
+        yield return new WaitForSeconds(0.5f);
+        MyChild.SetActive(false);
+        
+        targetSize = new Vector2(targetWidth, 0);
+
+        currSize = (Time.time - startTime) * speed;
+        Debug.Log(totalSizeNeeded);
+        Debug.Log(currSize);
+
+        while(GetComponent<RectTransform>().offsetMin != targetSize) {
+            currSize = (Time.time - startTime) * speed;
+            fractionOfTotalSize = currSize/totalSizeNeeded;
+
+            GetComponent<RectTransform>().offsetMin = Vector2.Lerp(OriginalSize, targetSize, fractionOfTotalSize);
+
+            // yield return new WaitForEndOfFrame();
+            yield return null;
+        }
+
+        StopCoroutine(StartMenuExtend());
     }
 }

@@ -11,6 +11,8 @@ public class TextFader : MonoBehaviour
 
     private Text MyText => GetComponent<Text>();
 
+    private IEnumerator _isDoneFading;
+
     public void TextFadeContoller(bool isFadeText = true)
     {
         StartCoroutine(FadeText(isFadeText));
@@ -18,16 +20,17 @@ public class TextFader : MonoBehaviour
 
     IEnumerator FadeText(bool isFadeText)
     {
-        if(isFadeText) {
+        if(isFadeText) { // fade
             while(MyText.color.a != 0) {
                 MyText.color -= new Color(0,0,0, _fadeSpeed);
-                yield return null;
-            }          
-        } else {
-            while(MyText.color.a != 0) {
-                MyText.color -= new Color(0,0,0, _fadeSpeed);
-                yield return null;
+                yield return new WaitForEndOfFrame();
+            }
+        } else { // reveal
+            while(MyText.color.a != 1) {
+                MyText.color += new Color(0,0,0, _fadeSpeed);
+                yield return new WaitForEndOfFrame();
             }         
         }
+        yield return true;
     }
 }
