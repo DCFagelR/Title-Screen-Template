@@ -44,9 +44,9 @@ public class MenuExtender : MonoBehaviour
         float currSize;
         float totalSizeNeeded = Vector2.Distance(OriginalSize, new Vector2(targetWidth, 0));
         float fractionOfTotalSize = 0f;
-        float startTime = Time.time;
+        float startTime;
 
-        float speed = 800f;
+        float speed = 1000f;
 
         // Wait for buttons to disappear before setting them inactive
         yield return new WaitForSeconds(0.5f);
@@ -54,10 +54,7 @@ public class MenuExtender : MonoBehaviour
         
         targetSize = new Vector2(targetWidth, 0);
 
-        currSize = (Time.time - startTime) * speed;
-        Debug.Log(totalSizeNeeded);
-        Debug.Log(currSize);
-
+        startTime = Time.time;
         while(GetComponent<RectTransform>().offsetMin != targetSize) {
             currSize = (Time.time - startTime) * speed;
             fractionOfTotalSize = currSize/totalSizeNeeded;

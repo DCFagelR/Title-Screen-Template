@@ -1055,6 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500e4f9ffc9c345459d2db6315a27b68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fadeSpeed: 0.1
 --- !u!1001 &1857840345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1253,7 +1254,7 @@ RectTransform:
   m_Father: {fileID: 313924308}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7802709, y: 0}
+  m_AnchorMin: {x: 0.78, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -1308,7 +1309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e50a2c17af1e0488366a1141aa19dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeSpeed: 1
 --- !u!1 &2111576006
 GameObject:
   m_ObjectHideFlags: 0
