@@ -6,12 +6,10 @@ public class BlackFade : MonoBehaviour
 
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    // Speed of the black fade
     public const float FADE_SPEED = 0.5f;
 
     public CanvasGroup canvasGroup => GetComponent<CanvasGroup>();
 
-    // fadeFrom: true = fadeFrom() is called
     public void FadeController(bool fadeFrom = true) 
     {
         if(fadeFrom) {
