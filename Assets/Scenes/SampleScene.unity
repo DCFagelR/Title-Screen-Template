@@ -381,7 +381,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1861059012}
+      objectReference: {fileID: 1861059013}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -390,12 +390,12 @@ PrefabInstance:
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuExtender, Assembly-CSharp
+      value: MenuExtendController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExtendMenu
+      value: StartMenuExtend
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594684, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
@@ -628,7 +628,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1861059012}
+      objectReference: {fileID: 1861059013}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -637,12 +637,12 @@ PrefabInstance:
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuExtender, Assembly-CSharp
+      value: MenuExtendController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExtendMenu
+      value: StartMenuExtend
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594684, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
@@ -1214,19 +1214,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7375136747753108954}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1461373605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461373601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500e4f9ffc9c345459d2db6315a27b68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fadeSpeed: 0.1
 --- !u!1001 &1857840345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1402,7 +1389,9 @@ GameObject:
   - component: {fileID: 1861059009}
   - component: {fileID: 1861059011}
   - component: {fileID: 1861059010}
+  - component: {fileID: 1861059013}
   - component: {fileID: 1861059012}
+  - component: {fileID: 1861059014}
   m_Layer: 5
   m_Name: Menu_Root
   m_TagString: Untagged
@@ -1481,6 +1470,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenSpeed: 5
+--- !u!114 &1861059013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861059008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc76f930db81cd34bbb5ce1a8c41328c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenuText: {fileID: 1461373601}
+--- !u!114 &1861059014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861059008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70efd55b642bbe64c97d9c01e5aec0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2111576006
 GameObject:
   m_ObjectHideFlags: 0
