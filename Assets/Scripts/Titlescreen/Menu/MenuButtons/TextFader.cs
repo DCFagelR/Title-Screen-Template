@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,18 +11,20 @@ public class TextFader : MonoBehaviour
     [Range(0.01f,1)]
     [SerializeField]
     private float _fadeSpeed = 0.1f;
+    private bool _isDoneFading;
 
     public void TextFadeContoller(bool isFadeText = true)
     {
+        _isDoneFading = false;
         StartCoroutine(FadeText(isFadeText));
     }
 
-    public float getTextAlpha()
+    public bool getIsDoneFading()
     {
-        return MyText.color.a;
+        return _isDoneFading;
     }
 
-    IEnumerator FadeText(bool isFadeText)
+    private IEnumerator FadeText(bool isFadeText)
     {
         if(isFadeText) { // fade
             while(MyText.color.a > 0) {
@@ -37,5 +39,7 @@ public class TextFader : MonoBehaviour
             }
             transform.parent.gameObject.SetActive(true);      
         }
+
+        _isDoneFading = true;
     }
 }
