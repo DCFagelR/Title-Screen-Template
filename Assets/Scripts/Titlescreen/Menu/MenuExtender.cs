@@ -12,27 +12,14 @@ public class MenuExtender : MonoBehaviour
     
     private GameObject _childButtons;
 
-
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public void ExtendMenu()
     {
-        FadeMenuButtons();
-        StartCoroutine(StartMenuExtend());
-    }
-
-// ----------------------------------------------------------------------------
-
-    private void FadeMenuButtons()
-    {
-        int currChild = 0;
-
-        // fades all child buttons
-        while(currChild < MyChild.transform.childCount) {
-            _childButtons = MyChild.transform.GetChild(currChild).gameObject;
-            _childButtons.GetComponentInChildren<TextFader>().TextFadeContoller(true);
-            currChild++;
-        }
+        GetComponent<HideButtons>().FadeMenuText();
+        Debug.Log("Done Fading.");
+        
+        // StartCoroutine(StartMenuExtend());
     }
 
 // ----------------------------------------------------------------------------
@@ -49,7 +36,7 @@ public class MenuExtender : MonoBehaviour
         float speed = 1000f;
 
         // Wait for buttons to disappear before setting them inactive
-        yield return new WaitForSeconds(0.5f);
+        // while(MyChild.transform.GetChild(0).gameObject.GetComponentInChildren<TextFader>().getTextAlpha )
         MyChild.SetActive(false);
         
         targetSize = new Vector2(targetWidth, 0);

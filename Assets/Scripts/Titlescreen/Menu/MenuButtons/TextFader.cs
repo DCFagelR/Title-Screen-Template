@@ -18,6 +18,11 @@ public class TextFader : MonoBehaviour
         StartCoroutine(FadeText(isFadeText));
     }
 
+    public float getTextAlpha()
+    {
+        return MyText.color.a;
+    }
+
     IEnumerator FadeText(bool isFadeText)
     {
         if(isFadeText) { // fade
