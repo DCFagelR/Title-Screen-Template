@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HideButtons : MonoBehaviour
 {
@@ -19,19 +16,5 @@ public class HideButtons : MonoBehaviour
             _currentButton.GetComponentInChildren<TextFader>().TextFadeContoller(true);
             _currChild++;
         }
-
-        StopCoroutine(WaitForFade());
-        StartCoroutine(WaitForFade());
-    }
-
-    private IEnumerator WaitForFade()
-    {
-        while(_currentButton.GetComponentInChildren<TextFader>().getTextAlpha() > 0)
-        {
-            Debug.Log("Not done fading.");
-            yield return new WaitForEndOfFrame();
-        }
-
-        
     }
 }

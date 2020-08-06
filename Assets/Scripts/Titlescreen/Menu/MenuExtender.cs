@@ -17,8 +17,6 @@ public class MenuExtender : MonoBehaviour
     public void ExtendMenu()
     {
         GetComponent<HideButtons>().FadeMenuText();
-        Debug.Log("Done Fading.");
-        
         // StartCoroutine(StartMenuExtend());
     }
 
