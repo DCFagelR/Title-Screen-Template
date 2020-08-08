@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MenuExtendController : MonoBehaviour
 {
-    public GameObject MenuText; // Start button text
+    // public GameObject MenuText; // Start button text
 
     public void StartMenuExtend()
     {
@@ -13,11 +13,11 @@ public class MenuExtendController : MonoBehaviour
 
     private IEnumerator MenuExtendAnimation()
     {
-        GetComponent<HideButtons>().FadeMenuText();
+        // GetComponent<HideButtons>().FadeMenuText();
 
-        while(!MenuText.GetComponent<TextFader>().getIsDoneFading()) {
-            yield return new WaitForSeconds(0.2f);
-        }
+        // while(!MenuText.GetComponent<TextFader>().getIsDoneFading()) {
+        //     yield return new WaitForSeconds(0.2f);
+        // }
 
         GetComponent<MenuExtender>().ExtendMenu();
 

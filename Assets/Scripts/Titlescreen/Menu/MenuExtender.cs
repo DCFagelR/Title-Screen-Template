@@ -7,10 +7,7 @@ public class MenuExtender : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    private GameObject MyChild => transform.GetChild(0).gameObject;
     private Vector2 OriginalSize => GetComponent<RectTransform>().sizeDelta;
-    
-    private GameObject _childButtons;
 
     [Range(1,10)]
     [SerializeField]
@@ -29,15 +26,15 @@ public class MenuExtender : MonoBehaviour
     {
         Vector2 currentSize;
         Vector2 targetSize;
-        float fullscreenWidth = -Screen.width * GetComponent<RectTransform>().anchorMin.x;
         float currentPercent = 0f;
 
+        // -OriginalSize because its offsetMin. Corrects math issues
         if(isExtending) {
-            currentSize = OriginalSize;
-            targetSize = new Vector2(fullscreenWidth, 0);
+            currentSize = -OriginalSize;
+            targetSize = Vector2.zero;
         } else {
-            currentSize = new Vector2(fullscreenWidth, 0);
-            targetSize = OriginalSize;
+            currentSize = Vector2.zero;
+            targetSize = -OriginalSize;
         }
 
         while(GetComponent<RectTransform>().offsetMin != targetSize) {
