@@ -11,7 +11,7 @@ public class MenuExtender : MonoBehaviour
 
     [Range(1,10)]
     [SerializeField]
-    private float screenSpeed = 5;
+    private float _extendSpeed = 5;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -39,7 +39,7 @@ public class MenuExtender : MonoBehaviour
 
         while(GetComponent<RectTransform>().offsetMin != targetSize) {
             GetComponent<RectTransform>().offsetMin = Vector2.Lerp(currentSize, targetSize, currentPercent);
-            currentPercent += screenSpeed * Time.deltaTime;
+            currentPercent += _extendSpeed * Time.deltaTime;
             // yield return new WaitForEndOfFrame();
             yield return null;
         }
