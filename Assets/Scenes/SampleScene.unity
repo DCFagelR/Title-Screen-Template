@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f4bca1ff8c9c843837db3b3d260011, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b18e35e9683dc64397c7ac137902add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1144427971 stripped
@@ -1659,6 +1659,21 @@ PrefabInstance:
       propertyPath: buttonPress
       value: 
       objectReference: {fileID: 8300000, guid: 853c98a131e16874cb087e2ac1f10290, type: 3}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonSelectPlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonSelectLoop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonPressPlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1717,7 +1732,7 @@ PrefabInstance:
     - target: {fileID: 3048219063680792827, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_Name
-      value: SoundController
+      value: AudioController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2062d3829082bd418a9333c29f5cd73, type: 3}
