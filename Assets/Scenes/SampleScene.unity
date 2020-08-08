@@ -1674,6 +1674,21 @@ PrefabInstance:
       propertyPath: buttonPressPlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: bgmLoop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: backgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b5543768390e0448250cb0cca556c4, type: 3}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: backgroundMusicVolume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_LocalPosition.x

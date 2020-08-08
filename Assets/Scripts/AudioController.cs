@@ -17,9 +17,9 @@ public class AudioController : MonoBehaviour
     public bool buttonPressLoop = true;
 
     public AudioClip backgroundMusic;
-    [Range(0,1)] public float bgmVolume = 1;
-    public bool bgmPlayOnAwake = true;
-    public bool bgmLoop = true;
+    [Range(0,1)] public float backgroundMusicVolume = 1;
+    public bool backgroundMusicPlayOnAwake = true;
+    public bool backgroundMusicLoop = true;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -27,7 +27,13 @@ public class AudioController : MonoBehaviour
     {
         _audioSource1 = AddAudio(buttonSelect, buttonSelectVolume, buttonSelectPlayOnAwake, buttonSelectLoop);
         _audioSource2 = AddAudio(buttonPress, buttonPressVolume, buttonPressPlayOnAwake, buttonPressLoop);
+        _audioSource3 = AddAudio(backgroundMusic, backgroundMusicVolume, backgroundMusicPlayOnAwake, backgroundMusicLoop);
+    
+        PlaySounds(_audioSource1);
+        PlaySounds(_audioSource2);
+        PlaySounds(_audioSource3);
     }
+    
 
 // -------------------------------------------------------------------------------------------------
 
@@ -40,6 +46,14 @@ public class AudioController : MonoBehaviour
         newAudio.loop = loop;
 
         return newAudio;
+    }
+
+// --------------------------------------------------------------------------------------------------
+
+    private void PlaySounds(AudioSource audioSource)
+    {
+        if(audioSource.playOnAwake)
+            audioSource.Play();
     }
 
 // --------------------------------------------------------------------------------------------------
