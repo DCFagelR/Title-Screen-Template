@@ -1639,6 +1639,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1841357111709173480, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 57b5543768390e0448250cb0cca556c4, type: 3}
+    - target: {fileID: 1841357111709173480, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: buttonPressVolume
@@ -1683,7 +1693,7 @@ PrefabInstance:
         type: 3}
       propertyPath: backgroundMusic
       value: 
-      objectReference: {fileID: 8300000, guid: 57b5543768390e0448250cb0cca556c4, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: backgroundMusicVolume
