@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3048219063680792825}
   - component: {fileID: 3048219063680792824}
+  - component: {fileID: 185156910847321160}
   - component: {fileID: 1841357111709173480}
   m_Layer: 0
   m_Name: SoundController
@@ -52,6 +53,14 @@ MonoBehaviour:
   buttonPressVolume: 1
   buttonPressPlayOnAwake: 1
   buttonPressLoop: 1
+--- !u!81 &185156910847321160
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048219063680792827}
+  m_Enabled: 1
 --- !u!82 &1841357111709173480
 AudioSource:
   m_ObjectHideFlags: 0

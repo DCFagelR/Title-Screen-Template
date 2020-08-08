@@ -569,7 +569,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -577,14 +576,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1646,24 +1637,14 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 57b5543768390e0448250cb0cca556c4, type: 3}
     - target: {fileID: 1841357111709173480, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841357111709173480, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
       propertyPath: m_Volume
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: buttonPressVolume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: buttonPressLoop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: buttonSelect
-      value: 
-      objectReference: {fileID: 8300000, guid: cc6a619e7ac438e43b4c04fc10b0eb68, type: 3}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: buttonPress
@@ -1671,7 +1652,22 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 853c98a131e16874cb087e2ac1f10290, type: 3}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
-      propertyPath: buttonSelectPlayOnAwake
+      propertyPath: buttonSelect
+      value: 
+      objectReference: {fileID: 8300000, guid: cc6a619e7ac438e43b4c04fc10b0eb68, type: 3}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonPressVolume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonPressPlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
+        type: 3}
+      propertyPath: buttonPressLoop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
@@ -1681,38 +1677,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
-      propertyPath: buttonPressPlayOnAwake
+      propertyPath: buttonSelectPlayOnAwake
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: bgmLoop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: backgroundMusic
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3048219063680792824, guid: c2062d3829082bd418a9333c29f5cd73,
-        type: 3}
-      propertyPath: backgroundMusicVolume
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 704.2074
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 213.87193
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -299.50845
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3048219063680792825, guid: c2062d3829082bd418a9333c29f5cd73,
         type: 3}
