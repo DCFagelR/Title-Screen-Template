@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b18e35e9683dc64397c7ac137902add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSelect: {fileID: 0}
+  buttonSelect: {fileID: 8300000, guid: cc6a619e7ac438e43b4c04fc10b0eb68, type: 3}
   buttonSelectVolume: 1
   buttonSelectPlayOnAwake: 1
   buttonSelectLoop: 1
-  buttonPress: {fileID: 0}
+  buttonPress: {fileID: 8300000, guid: 853c98a131e16874cb087e2ac1f10290, type: 3}
   buttonPressVolume: 1
   buttonPressPlayOnAwake: 1
   buttonPressLoop: 1
@@ -71,7 +71,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 57b5543768390e0448250cb0cca556c4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
