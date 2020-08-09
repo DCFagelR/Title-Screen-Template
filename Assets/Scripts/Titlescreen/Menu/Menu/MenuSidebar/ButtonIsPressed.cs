@@ -5,9 +5,12 @@ using UnityEngine.UI;
 public class ButtonIsPressed : MonoBehaviour
 {
 
-    private GameObject[] _menuButtons; // Array of which child is currently not interactable
+// ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    private GameObject[] _menuButtons; // Array of which child is currently not interactable
     private GameObject _deactivateMe;
+
+// ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     void Start() {
         _menuButtons = new GameObject[transform.childCount];
@@ -16,6 +19,8 @@ public class ButtonIsPressed : MonoBehaviour
             _menuButtons[i] = transform.GetChild(i).gameObject;
         }
     }
+
+// ----------------------------------------------------------------------------
 
     public void ReactivateButton(GameObject pressedButton)
     {
@@ -28,6 +33,8 @@ public class ButtonIsPressed : MonoBehaviour
 
         DeactivateButton(pressedButton);
     }
+
+// ----------------------------------------------------------------------------
 
     private void DeactivateButton(GameObject button)
     {

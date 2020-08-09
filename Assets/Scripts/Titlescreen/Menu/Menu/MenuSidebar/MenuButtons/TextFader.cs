@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TextFader : MonoBehaviour
 {
+// ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     private Text MyText => GetComponent<Text>();
 
@@ -13,16 +14,22 @@ public class TextFader : MonoBehaviour
     private float _fadeSpeed = 0.1f;
     private bool _isDoneFading;
 
+// ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     public void TextFadeContoller(bool isFadeText = true)
     {
         _isDoneFading = false;
         StartCoroutine(FadeText(isFadeText));
     }
 
+// ----------------------------------------------------------------------------
+
     public bool getIsDoneFading()
     {
         return _isDoneFading;
     }
+
+// ----------------------------------------------------------------------------
 
     private IEnumerator FadeText(bool isFadeText)
     {
