@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonIsPressed : MonoBehaviour
@@ -20,6 +21,7 @@ public class ButtonIsPressed : MonoBehaviour
     {
         for(int i = 0; i < transform.childCount; i++) {
             if(_menuButtons[i].GetComponent<Button>().interactable == false) {
+                transform.GetChild(i).GetComponent<EventTrigger>().enabled = true;
                 transform.GetChild(i).GetComponent<Button>().interactable = true;
             }
         }
@@ -29,6 +31,7 @@ public class ButtonIsPressed : MonoBehaviour
 
     private void DeactivateButton(GameObject button)
     {
+        button.GetComponent<EventTrigger>().enabled = false;
         button.GetComponent<Button>().interactable = false;
     }
 }
