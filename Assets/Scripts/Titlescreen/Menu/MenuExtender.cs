@@ -7,6 +7,9 @@ public class MenuExtender : MonoBehaviour
     
     private Vector2 OriginalSize => GetComponent<InitialMenuSize>().getClosedSize();
 
+    [SerializeField]
+    private GameObject _mainMenu;
+
     [Range(1,10)]
     [SerializeField]
     private float _extendSpeed = 5;
@@ -36,8 +39,8 @@ public class MenuExtender : MonoBehaviour
             Debug.Log(targetSize);
         }
 
-        while(GetComponent<RectTransform>().offsetMin != targetSize) {
-            GetComponent<RectTransform>().offsetMin = Vector2.Lerp(currentSize, targetSize, currentPercent);
+        while(_mainMenu.GetComponent<RectTransform>().offsetMin != targetSize) {
+            _mainMenu.GetComponent<RectTransform>().offsetMin = Vector2.Lerp(currentSize, targetSize, currentPercent);
             currentPercent += _extendSpeed * Time.deltaTime;
             // yield return new WaitForEndOfFrame();
             yield return null;
