@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8445867164876485306}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuExtender, Assembly-CSharp
         m_MethodName: ExtendMenu
         m_Mode: 6
@@ -297,10 +297,8 @@ GameObject:
   - component: {fileID: 8445867164876485253}
   - component: {fileID: 8445867164876485307}
   - component: {fileID: 8445867164876485252}
-  - component: {fileID: 8925215397715866441}
-  - component: {fileID: 8445867164876485306}
   m_Layer: 5
-  m_Name: MenuMain
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -367,31 +365,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8925215397715866441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445867164876485254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b0f74db53084b4dae25016a9084e13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8445867164876485306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445867164876485254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3e50a2c17af1e0488366a1141aa19dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _extendSpeed: 5
 --- !u!1 &8677486242728066534
 GameObject:
   m_ObjectHideFlags: 0
