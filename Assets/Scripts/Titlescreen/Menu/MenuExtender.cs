@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class MenuExtender : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    private Vector2 OriginalSize => GetComponent<RectTransform>().sizeDelta;
+    private Vector2 OriginalSize => GetComponent<InitialMenuSize>().getClosedSize();
+
+    [SerializeField]
+    private GameObject _mainMenu;
 
     [Range(1,10)]
     [SerializeField]
@@ -35,10 +36,11 @@ public class MenuExtender : MonoBehaviour
         } else {
             currentSize = Vector2.zero;
             targetSize = -OriginalSize;
+            Debug.Log(targetSize);
         }
 
-        while(GetComponent<RectTransform>().offsetMin != targetSize) {
-            GetComponent<RectTransform>().offsetMin = Vector2.Lerp(currentSize, targetSize, currentPercent);
+        while(_mainMenu.GetComponent<RectTransform>().offsetMin != targetSize) {
+            _mainMenu.GetComponent<RectTransform>().offsetMin = Vector2.Lerp(currentSize, targetSize, currentPercent);
             currentPercent += _extendSpeed * Time.deltaTime;
             // yield return new WaitForEndOfFrame();
             yield return null;
