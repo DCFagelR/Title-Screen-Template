@@ -9,6 +9,7 @@ public class ButtonIsPressed : MonoBehaviour
 
     private GameObject[] _menuButtons; // Array of which child is currently not interactable
     private GameObject _deactivateMe;
+    private GameObject _pressedButton;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -22,7 +23,17 @@ public class ButtonIsPressed : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
-    public void ReactivateButton(GameObject pressedButton)
+    public void SwitchActiveButton(GameObject button)
+    {
+        _pressedButton = button;
+
+        ReactivateButton();
+        DeactivateButton();
+    }
+
+// ----------------------------------------------------------------------------
+
+    public void ReactivateButton()
     {
         for(int i = 0; i < transform.childCount; i++) {
             if(_menuButtons[i].GetComponent<Button>().interactable == false) {
@@ -30,15 +41,13 @@ public class ButtonIsPressed : MonoBehaviour
                 transform.GetChild(i).GetComponent<Button>().interactable = true;
             }
         }
-
-        DeactivateButton(pressedButton);
     }
 
 // ----------------------------------------------------------------------------
 
-    private void DeactivateButton(GameObject button)
+    private void DeactivateButton()
     {
-        button.GetComponent<EventTrigger>().enabled = false;
-        button.GetComponent<Button>().interactable = false;
+        _pressedButton.GetComponent<EventTrigger>().enabled = false;
+        _pressedButton.GetComponent<Button>().interactable = false;
     }
 }
