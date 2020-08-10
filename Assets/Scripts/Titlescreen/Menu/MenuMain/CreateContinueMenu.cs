@@ -5,9 +5,4 @@ using UnityEngine;
 public class CreateContinueMenu : MonoBehaviour
 {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

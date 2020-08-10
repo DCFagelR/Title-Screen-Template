@@ -3,7 +3,7 @@
 public class StartFadeTo : MonoBehaviour
 {
     [SerializeField]
-    private BlackFade _fader = null;
+    private Fade _fader = null;
 
     public void Awake()
     {
