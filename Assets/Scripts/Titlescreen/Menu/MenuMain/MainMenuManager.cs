@@ -1,10 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour
 {
+// ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     public GameObject title;
     public GameObject fadeScreen;
     public GameObject buttonHolder;
@@ -13,6 +14,8 @@ public class MainMenuManager : MonoBehaviour
     private GameObject _continuePrefab = null;
 
     private bool _isOpen;
+
+// ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public void MenuManager()
     {
@@ -25,6 +28,8 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
+// ----------------------------------------------------------------------------
+
     private void CreateMenu()
     {
         title.GetComponent<Text>().text = buttonHolder.GetComponent<ButtonIsPressed>().pressedButtonName;
@@ -32,6 +37,8 @@ public class MainMenuManager : MonoBehaviour
         // Makes the prefab a child of the MainMenu, the current gameobject
         Instantiate(_continuePrefab, transform);
     }
+
+// ----------------------------------------------------------------------------
 
     private IEnumerator ShowMenu()
     {
@@ -46,6 +53,8 @@ public class MainMenuManager : MonoBehaviour
         fadeScreen.GetComponent<Fade>().FadeController(true);
         StopCoroutine(ShowMenu());
     }
+
+// ----------------------------------------------------------------------------
 
     private IEnumerator HideMenu()
     {
