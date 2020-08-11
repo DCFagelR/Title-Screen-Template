@@ -10,38 +10,55 @@ public class MainMenuManager : MonoBehaviour
     public GameObject buttonHolder;
 
     [SerializeField]
-    private GameObject _continuePrefab;
+    private GameObject _continuePrefab = null;
 
     private bool _isOpen;
-    private string _folderRoute = "Prefabs/Title/MenuExtender/MenuMain/";
 
     public void MenuManager()
     {
-        StopCoroutine(showMenu());
-        StartCoroutine(showMenu());
+        if(_isOpen){
+            StopCoroutine(HideMenu());
+            StartCoroutine(HideMenu());
+        } else {
+            StopCoroutine(ShowMenu());
+            StartCoroutine(ShowMenu());
+        }
     }
 
-    IEnumerator showMenu()
+    private void CreateMenu()
     {
+        title.GetComponent<Text>().text = buttonHolder.GetComponent<ButtonIsPressed>().pressedButtonName;
+
+        // Makes the prefab a child of the MainMenu, the current gameobject
+        Instantiate(_continuePrefab, transform);
+    }
+
+    private IEnumerator ShowMenu()
+    {
+        // Wait to finish opening menu
         while(GetComponent<RectTransform>().offsetMin.x > 0 && !_isOpen) {
             yield return new WaitForEndOfFrame();
         }
 
         _isOpen = true;
-        StopCoroutine(showMenu());
-        StartCoroutine(createMenu());
+        CreateMenu();
 
         fadeScreen.GetComponent<Fade>().FadeController(true);
-
-        yield return null;
+        StopCoroutine(ShowMenu());
     }
 
-    IEnumerator createMenu()
+    private IEnumerator HideMenu()
     {
-        title.GetComponent<Text>().text = buttonHolder.GetComponent<ButtonIsPressed>().pressedButtonName;
+        fadeScreen.GetComponent<Fade>().FadeController(false);
 
-        Instantiate(_continuePrefab);
+        while(!fadeScreen.GetComponent<Fade>().GetIsDoneFade()) {
+            yield return new WaitForEndOfFrame();
+        }
+
+        Destroy(transform.GetChild(transform.childCount - 1).gameObject);
 
         yield return null;
+
+        StartCoroutine(ShowMenu());
     }
 }

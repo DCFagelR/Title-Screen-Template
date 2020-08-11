@@ -24,8 +24,8 @@ public class InitialMenuSize : MonoBehaviour
 
     void Start()
     {
-        setSideMenuSize();
-        setMainMenuSize();
+        SetSideMenuSize();
+        SetMainMenuSize();
     }
 
 // ----------------------------------------------------------------------------
@@ -34,7 +34,7 @@ public class InitialMenuSize : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
-    private void setSideMenuSize()
+    private void SetSideMenuSize()
     {
         _sideMenu.GetComponent<RectTransform>().anchorMin = new Vector2(_sideMenuMinAnchorX, 0);
         _sideMenu.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
@@ -45,7 +45,7 @@ public class InitialMenuSize : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
-    private void setMainMenuSize()
+    private void SetMainMenuSize()
     {
         float sideMinX = _sideMenu.GetComponent<RectTransform>().anchorMin.x;
         float horizontalSize = ReferenceResolution * sideMinX;

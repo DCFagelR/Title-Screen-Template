@@ -381,6 +381,8 @@ MonoBehaviour:
   title: {fileID: 4619048161378889190}
   fadeScreen: {fileID: 4716986566665515635}
   buttonHolder: {fileID: 0}
+  _continuePrefab: {fileID: 1822105680496799744, guid: adc70295f90db9046b1c50b2a8440cb1,
+    type: 3}
 --- !u!1 &8677486242728066534
 GameObject:
   m_ObjectHideFlags: 0

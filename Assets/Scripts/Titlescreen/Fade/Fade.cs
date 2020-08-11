@@ -10,8 +10,12 @@ public class Fade : MonoBehaviour
 
     public CanvasGroup canvasGroup => GetComponent<CanvasGroup>();
 
+    private bool _isDoneFade = false;
+
     public void FadeController(bool fadeFrom = true) 
     {
+        _isDoneFade = false;
+
         if(fadeFrom) {
             StartCoroutine(FadeFromBlack());
         } else {
@@ -21,6 +25,10 @@ public class Fade : MonoBehaviour
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    public bool GetIsDoneFade() {return _isDoneFade;}
+
+// ----------------------------------------------------------------------------
+
     // Black to screen
     IEnumerator FadeFromBlack()
     {
@@ -28,6 +36,8 @@ public class Fade : MonoBehaviour
             canvasGroup.alpha -= Time.deltaTime/FADE_SPEED;
             yield return null;
         }
+
+        _isDoneFade = true;
     }
 
 // ----------------------------------------------------------------------------
@@ -39,6 +49,8 @@ public class Fade : MonoBehaviour
             canvasGroup.alpha += Time.deltaTime/FADE_SPEED;
             yield return null;
         }
+
+        _isDoneFade = true;
     }
     
 // ----------------------------------------------------------------------------
