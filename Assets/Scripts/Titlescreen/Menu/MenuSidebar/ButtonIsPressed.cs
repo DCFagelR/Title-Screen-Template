@@ -11,6 +11,8 @@ public class ButtonIsPressed : MonoBehaviour
     private GameObject _deactivateMe;
     private GameObject _pressedButton;
 
+    public string pressedButtonName;
+
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     void Start() {
@@ -26,6 +28,7 @@ public class ButtonIsPressed : MonoBehaviour
     public void SwitchActiveButton(GameObject button)
     {
         _pressedButton = button;
+        pressedButtonName = _pressedButton.GetComponentInChildren<Text>().text;
 
         ReactivateButton();
         DeactivateButton();

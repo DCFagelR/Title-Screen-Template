@@ -8,7 +8,7 @@ public class MenuExtender : MonoBehaviour
     private Vector2 OriginalSize => GetComponent<InitialMenuSize>().getClosedSize();
 
     [SerializeField]
-    private GameObject _mainMenu;
+    private GameObject _mainMenu = null;
 
     [Range(1,10)]
     [SerializeField]

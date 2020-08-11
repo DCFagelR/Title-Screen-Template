@@ -10,9 +10,9 @@ public class InitialMenuSize : MonoBehaviour
     private float ReferenceResolution => transform.parent.GetComponentInParent<CanvasScaler>().referenceResolution.x;
 
     [SerializeField]
-    private GameObject _sideMenu;
+    private GameObject _sideMenu = null;
     [SerializeField]
-    private GameObject _mainMenu;
+    private GameObject _mainMenu = null;
 
     [SerializeField]
     [Range(0,0.8f)]
