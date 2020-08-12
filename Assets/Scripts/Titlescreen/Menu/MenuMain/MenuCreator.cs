@@ -15,14 +15,19 @@ public class MenuCreator : MonoBehaviour
     public GameObject title;
 
     private int _currPressed;
-    private string _title;
+    private string _titleText;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public void CreateMenu()
     {
         _currPressed = GetComponent<ActiveButtonInfo>().GetPressedNumber();
-        _title = GetComponent<ActiveButtonInfo>().GetPressedName();
+        _titleText = GetComponent<ActiveButtonInfo>().GetPressedName();
+
+        if(!title.activeInHierarchy)
+        {
+            title.SetActive(true);
+        }
 
         ChangeTitle();
         CreatePrefab();
@@ -32,7 +37,7 @@ public class MenuCreator : MonoBehaviour
 
     private void ChangeTitle()
     {
-        title.GetComponent<Text>().text = _title;
+        title.GetComponent<Text>().text = _titleText;
     }
 
 // ----------------------------------------------------------------------------
