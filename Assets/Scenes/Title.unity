@@ -274,8 +274,24 @@ PrefabInstance:
     - target: {fileID: 599760992321364785, guid: 4d95b02eedc3679408b209db681a5770,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 599760992321364790, guid: 4d95b02eedc3679408b209db681a5770,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.64038086
+      objectReference: {fileID: 0}
+    - target: {fileID: 599760992321364790, guid: 4d95b02eedc3679408b209db681a5770,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.1845703
+      objectReference: {fileID: 0}
+    - target: {fileID: 599760992321364791, guid: 4d95b02eedc3679408b209db681a5770,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ac971243e9e9644ea7372684c5cd313,
+        type: 3}
     - target: {fileID: 2850087154351036371, guid: 4d95b02eedc3679408b209db681a5770,
         type: 3}
       propertyPath: m_IsActive
