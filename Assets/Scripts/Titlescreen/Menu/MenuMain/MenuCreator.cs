@@ -14,8 +14,8 @@ public class MenuCreator : MonoBehaviour
     [Header("GameObjects")]
     public GameObject title;
 
-    private int _currPressed;
-    private string _titleText;
+    private int _currPressed;   // child # of active button
+    private string _titleText;  // name of active button
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -42,10 +42,10 @@ public class MenuCreator : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
+    // creates the menu. Array of prefabs SHOULD match up with the child number as long as they were
+    // placed in the correct order. Check the editor window
     private void CreatePrefab()
     {
-        Debug.Log(_currPressed);
-
         Instantiate(menuPrefabs[_currPressed], transform);
 
         transform.GetChild(transform.childCount - 1).transform.SetAsFirstSibling();

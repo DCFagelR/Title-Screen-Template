@@ -29,6 +29,7 @@ public class ButtonIsPressed : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
+    // Get child # of the current pressed button
     public int GetPressedNumber()
     {
         for(int i = 0; i < transform.childCount; i++) {

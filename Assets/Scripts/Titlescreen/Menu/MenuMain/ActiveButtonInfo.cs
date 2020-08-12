@@ -7,6 +7,7 @@ public class ActiveButtonInfo : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
+    // Get the name of the currently pressed button
     public string GetPressedName()
     {
         return buttonHolder.GetComponent<ButtonIsPressed>().GetPressedName();
@@ -14,6 +15,7 @@ public class ActiveButtonInfo : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
+    // Get the child number of the currently pressed button
     public int GetPressedNumber()
     {
         // -1 because of New Game button being 0th child

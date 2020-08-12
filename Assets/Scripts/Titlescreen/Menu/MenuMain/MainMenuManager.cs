@@ -8,7 +8,7 @@ public class MainMenuManager : MonoBehaviour
 
     public GameObject fadeScreen;
 
-    private bool _isOpen;
+    private bool _isOpen; // for when the menu is opening for the first time
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
