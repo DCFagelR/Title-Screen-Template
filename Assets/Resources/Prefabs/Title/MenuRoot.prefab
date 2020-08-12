@@ -230,6 +230,32 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2489892171050340492, guid: 89e467151be1e264993ee3b2fd622d06,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489892171050340492, guid: 89e467151be1e264993ee3b2fd622d06,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4860178470933682637, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+    - target: {fileID: 2489892171050340492, guid: 89e467151be1e264993ee3b2fd622d06,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489892171050340492, guid: 89e467151be1e264993ee3b2fd622d06,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489892171050340492, guid: 89e467151be1e264993ee3b2fd622d06,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3220156459410633643, guid: 89e467151be1e264993ee3b2fd622d06,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -405,7 +431,8 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6884593910540559007, guid: 89e467151be1e264993ee3b2fd622d06, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 89e467151be1e264993ee3b2fd622d06, type: 3}
 --- !u!1 &2480836255940263166 stripped
 GameObject:
