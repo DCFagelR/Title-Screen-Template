@@ -2,9 +2,8 @@
 
 public class ExitGame : MonoBehaviour
 {
-    public static void QuitGame()
+    public static void Confirmation()
     {
-        Debug.Log("The game has quit!");
-        Application.Quit();
+
     }
 }
