@@ -10,8 +10,8 @@ public class ButtonIsPressed : MonoBehaviour
     private GameObject[] _menuButtons; // Array of which child is currently not interactable
     private GameObject _deactivateMe;
     private GameObject _pressedButton;
-
-    public string pressedButtonName;
+    private string _pressedButtonName;
+    private int _pressedChildNumber;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -25,10 +25,28 @@ public class ButtonIsPressed : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
+    public string GetPressedName() {return _pressedButtonName;}
+
+// ----------------------------------------------------------------------------
+
+    public int GetPressedNumber()
+    {
+        for(int i = 0; i < transform.childCount; i++) {
+            if(_menuButtons[i].GetComponent<Button>().interactable == false) {
+                return i;
+            }
+        }
+
+        Debug.LogError("Somehow, no button is currently active.");
+        return -1;
+    }
+
+// ----------------------------------------------------------------------------
+
     public void SwitchActiveButton(GameObject button)
     {
         _pressedButton = button;
-        pressedButtonName = _pressedButton.GetComponentInChildren<Text>().text;
+        _pressedButtonName = _pressedButton.GetComponentInChildren<Text>().text;
 
         ReactivateButton();
         DeactivateButton();

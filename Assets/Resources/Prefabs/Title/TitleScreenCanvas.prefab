@@ -234,6 +234,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 4860178470933682637, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ebec1a8e2a1464db1e9ccba670cfb2, type: 3}
 --- !u!224 &3311497711300145105 stripped

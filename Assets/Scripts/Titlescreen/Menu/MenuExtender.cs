@@ -5,7 +5,7 @@ public class MenuExtender : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     
-    private Vector2 OriginalSize => GetComponent<InitialMenuSize>().getClosedSize();
+    private Vector2 OriginalSize => GetComponent<MenuInitializer>().getClosedSize();
 
     [SerializeField]
     private GameObject _mainMenu = null;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2570417668442752661}
   - component: {fileID: 7794960668022500037}
   - component: {fileID: 1862086979294936634}
-  - component: {fileID: 1422596334985199504}
+  - component: {fileID: 1592643176837657610}
   - component: {fileID: 1094512105135252268}
   m_Layer: 5
   m_Name: MenuRoot
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1422596334985199504
+--- !u!114 &1592643176837657610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,12 +88,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3269621972411507265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b0f74db53084b4dae25016a9084e13, type: 3}
+  m_Script: {fileID: 11500000, guid: 1da2f3eeef5e3e0419e22c420978cfcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sideMenu: {fileID: 2480836255940263166}
   _mainMenu: {fileID: 1107754803403824964}
-  _sideMenuMinAnchorX: 0.8
+  _sideMenuLeftAnchor: 0.8
 --- !u!114 &1094512105135252268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,6 +454,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3271921323853383673, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: menuPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3271921323853383673, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: menuPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7643382306021360912, guid: adc70295f90db9046b1c50b2a8440cb1,
+        type: 3}
+    - target: {fileID: 3271921323853383673, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: menuPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1123582001867033879, guid: 3bfd5385a58755446b72eaf494acd606,
+        type: 3}
     - target: {fileID: 4619048159702691897, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -492,6 +509,21 @@ PrefabInstance:
     - target: {fileID: 4619048161378889190, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716986566103438715, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716986566103438715, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4716986566103438715, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8224304730258237503, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
@@ -649,7 +681,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8629353441527045902, guid: 5fca3bbb3c3375f4e94bcad8601f4654,
+        type: 3}
+      propertyPath: buttonHolder
+      value: 
+      objectReference: {fileID: 3182239449011414993}
+    m_RemovedComponents:
+    - {fileID: 7561142267223128709, guid: 5fca3bbb3c3375f4e94bcad8601f4654, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5fca3bbb3c3375f4e94bcad8601f4654, type: 3}
 --- !u!1 &1107754803403824964 stripped
 GameObject:

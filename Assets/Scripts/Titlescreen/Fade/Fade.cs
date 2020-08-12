@@ -17,8 +17,10 @@ public class Fade : MonoBehaviour
         _isDoneFade = false;
 
         if(fadeFrom) {
+            StopAllCoroutines();
             StartCoroutine(FadeFromBlack());
         } else {
+            StopAllCoroutines();
             StartCoroutine(FadeToBlack());
         }
     }

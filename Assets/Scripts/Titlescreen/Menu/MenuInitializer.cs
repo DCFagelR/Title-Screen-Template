@@ -2,21 +2,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InitialMenuSize : MonoBehaviour
+public class MenuInitializer : MonoBehaviour
 {
 
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     private float ReferenceResolution => transform.parent.GetComponentInParent<CanvasScaler>().referenceResolution.x;
 
+    [Header("Menu Items")]
     [SerializeField]
     private GameObject _sideMenu = null;
     [SerializeField]
     private GameObject _mainMenu = null;
 
+    [Header("Side Menu Size")]
     [SerializeField]
     [Range(0,0.8f)]
-    private float _sideMenuMinAnchorX = 0.8f;
+    [Tooltip("Side menu size. Based on what percent of screen the menu sits on. 0.1 = on the 10%")]
+    private float _sideMenuLeftAnchor = 0.8f;
     
     private Vector2 _closedSize;
 
@@ -36,7 +39,7 @@ public class InitialMenuSize : MonoBehaviour
 
     private void SetSideMenuSize()
     {
-        _sideMenu.GetComponent<RectTransform>().anchorMin = new Vector2(_sideMenuMinAnchorX, 0);
+        _sideMenu.GetComponent<RectTransform>().anchorMin = new Vector2(_sideMenuLeftAnchor, 0);
         _sideMenu.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
 
         _sideMenu.GetComponent<RectTransform>().offsetMin = Vector2.zero;
