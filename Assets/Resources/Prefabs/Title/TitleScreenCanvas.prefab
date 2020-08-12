@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6358451967086104372}
   - component: {fileID: 6358451967086104375}
   - component: {fileID: 6358451967086104371}
+  - component: {fileID: 3329275561689830335}
   m_Layer: 5
   m_Name: TitleScreenCanvas
   m_TagString: Untagged
@@ -117,6 +118,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fader: {fileID: 3266936898322819492}
+--- !u!222 &3329275561689830335
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358451967086104374}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1756965133535437044
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -124,6 +133,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6358451967086104370}
     m_Modifications:
+    - target: {fileID: 1315450690501639265, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679846037913423805, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.61816406
+      objectReference: {fileID: 0}
+    - target: {fileID: 1679846037913423805, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.30541992
+      objectReference: {fileID: 0}
     - target: {fileID: 3861049316322840357, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -254,6 +278,11 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4793726618877984822}
+    - target: {fileID: 7360736663284559138, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8554411554507087551, guid: 31ebec1a8e2a1464db1e9ccba670cfb2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -621,6 +650,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6358451967086104370}
     m_Modifications:
+    - target: {fileID: 1803749300175669312, guid: 391e9e677ad16e640849162346d1ad4f,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5286963008801641738, guid: 391e9e677ad16e640849162346d1ad4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -733,30 +767,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
+        type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.6403198
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.1262054
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -1.2803955
-      objectReference: {fileID: 0}
-    - target: {fileID: 5286963009024985395, guid: 391e9e677ad16e640849162346d1ad4f,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -1.1261292
+      value: 0.64038086
       objectReference: {fileID: 0}
     - target: {fileID: 5286963009024985396, guid: 391e9e677ad16e640849162346d1ad4f,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1481399618666889475, guid: 391e9e677ad16e640849162346d1ad4f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 391e9e677ad16e640849162346d1ad4f, type: 3}
 --- !u!224 &599760992509067023 stripped
 RectTransform:

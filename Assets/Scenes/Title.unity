@@ -271,71 +271,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 599760992321364790, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.640625
-      objectReference: {fileID: 0}
-    - target: {fileID: 599760992321364790, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 729747053265296533, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094934811103801161, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.61816406
-      objectReference: {fileID: 0}
-    - target: {fileID: 1094934811103801161, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.30541992
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344012299022205944, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.64038086
-      objectReference: {fileID: 0}
-    - target: {fileID: 1344012299022205944, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.1845703
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202924837014916870, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202924837014916870, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: AudioController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202924837014916870, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2202924837014916870, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342726094868144709, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_FontData.m_MaxSize
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6342726094868144709, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_FontData.m_BestFit
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6358451967086104370, guid: 4d95b02eedc3679408b209db681a5770,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -445,21 +380,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TitleScreenCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8536527836565709039, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.64038086
-      objectReference: {fileID: 0}
-    - target: {fileID: 8536527836565709039, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.1262207
-      objectReference: {fileID: 0}
-    - target: {fileID: 9099356496850144726, guid: 4d95b02eedc3679408b209db681a5770,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d95b02eedc3679408b209db681a5770, type: 3}
