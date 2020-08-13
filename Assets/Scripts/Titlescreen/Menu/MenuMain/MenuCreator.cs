@@ -9,7 +9,7 @@ public class MenuCreator : MonoBehaviour
     [Header("Menu Prefabs")]
     [SerializeField]
     [Tooltip("Make sure size and order match the menu buttons!")]
-    private GameObject[] menuPrefabs;
+    private GameObject[] menuPrefabs = null;
 
     [Header("GameObjects")]
     public GameObject title;
