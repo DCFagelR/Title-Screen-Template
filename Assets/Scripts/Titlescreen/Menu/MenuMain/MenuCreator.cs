@@ -19,10 +19,10 @@ public class MenuCreator : MonoBehaviour
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    public void CreateMenu()
+    public void CreateMenu(int buttonNumber, string name)
     {
-        _currPressed = GetComponent<ActiveButtonInfo>().GetPressedNumber();
-        _titleText = GetComponent<ActiveButtonInfo>().GetPressedName();
+        _currPressed = buttonNumber;
+        _titleText = name;
 
         if(!title.activeInHierarchy)
         {

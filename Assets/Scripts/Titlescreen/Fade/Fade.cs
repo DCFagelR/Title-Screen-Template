@@ -15,6 +15,7 @@ public class Fade : MonoBehaviour
     public void FadeController(bool fadeFrom = true) 
     {
         _isDoneFade = false;
+        gameObject.SetActive(true);
 
         if(fadeFrom) {
             StopAllCoroutines();
@@ -40,6 +41,8 @@ public class Fade : MonoBehaviour
         }
 
         _isDoneFade = true;
+        
+        gameObject.SetActive(false);
     }
 
 // ----------------------------------------------------------------------------

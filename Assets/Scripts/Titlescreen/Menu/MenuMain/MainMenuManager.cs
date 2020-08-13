@@ -6,15 +6,22 @@ public class MainMenuManager : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+    private float closedSize => transform.parent.GetComponent<MenuInitializer>().getClosedSize().x;    
+
     public GameObject fadeScreen;
 
     private bool _isOpen;
+    private int _pressedButton;
+    private string _pressedName;
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     public void MenuManager()
     {
+        _pressedButton = GetComponent<ActiveButtonInfo>().GetPressedNumber();
+        _pressedName = GetComponent<ActiveButtonInfo>().GetPressedName();
         if(_isOpen){
+            StopCoroutine(SwitchMenu());
             StartCoroutine(SwitchMenu());
         } else {
             StopCoroutine(ShowMenu());
@@ -56,9 +63,10 @@ public class MainMenuManager : MonoBehaviour
         }
 
         _isOpen = true;
-        GetComponent<MenuCreator>().CreateMenu();
 
+        GetComponent<MenuCreator>().CreateMenu(_pressedButton, _pressedName);
         fadeScreen.GetComponent<Fade>().FadeController(true);
+
         StopCoroutine(ShowMenu());
     }
 
@@ -66,7 +74,7 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator HideMenu()
     {
-        while(GetComponent<RectTransform>().offsetMin.x < 1536 && _isOpen) {
+        while(GetComponent<RectTransform>().offsetMin.x < -closedSize && _isOpen) {
             yield return new WaitForEndOfFrame();
         }
 
