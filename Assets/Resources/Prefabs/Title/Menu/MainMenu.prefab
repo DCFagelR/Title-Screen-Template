@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.47058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -97,10 +97,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.50980395}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9137255, g: 0.48235294, b: 0.99215686, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -116,7 +116,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 2978081232328099205}
+  m_TargetGraphic: {fileID: 6749091537269383883}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 409678810757766420}
   - component: {fileID: 8629353441527045902}
   - component: {fileID: 3271921323853383673}
-  - component: {fileID: 7561142267223128709}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -305,11 +304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ce26e140955154419083a8f482b6abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
   fadeScreen: {fileID: 4716986566665515635}
-  buttonHolder: {fileID: 0}
 --- !u!114 &8629353441527045902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,19 +330,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1298619a08d5c4e9537bd40124c481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuPrefabs: []
   title: {fileID: 4619048161378889190}
---- !u!114 &7561142267223128709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445867164876485254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bba797fe9d665543a009a1148cadd5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8677486242728066534
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,9 +342,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6317939294470116362}
   - component: {fileID: 7192686921271952692}
-  - component: {fileID: 4770738418806760152}
+  - component: {fileID: 6749091537269383883}
   m_Layer: 5
-  m_Name: CollapseText
+  m_Name: CollapseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -393,7 +377,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8677486242728066534}
   m_CullTransparentMesh: 0
---- !u!114 &4770738418806760152
+--- !u!114 &6749091537269383883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -402,7 +386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8677486242728066534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -413,20 +397,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: '>'
+  m_Sprite: {fileID: 21300000, guid: eb43a121f71a5e442956fc014eeccc72, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &2277084798192769154
 PrefabInstance:
   m_ObjectHideFlags: 0
