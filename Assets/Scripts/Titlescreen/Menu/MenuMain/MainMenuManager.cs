@@ -15,7 +15,7 @@ public class MainMenuManager : MonoBehaviour
     public void MenuManager()
     {
         if(_isOpen){
-            StartCoroutine(HideMenu());
+            StartCoroutine(SwitchMenu());
         } else {
             StopCoroutine(ShowMenu());
             StartCoroutine(ShowMenu());
@@ -24,7 +24,13 @@ public class MainMenuManager : MonoBehaviour
 
 // ----------------------------------------------------------------------------
 
-    private IEnumerator HideMenu()
+    public void CollapseButton(){
+        StartCoroutine(HideMenu());
+    }
+
+// ----------------------------------------------------------------------------
+
+    private IEnumerator SwitchMenu()
     {
         fadeScreen.GetComponent<Fade>().FadeController(false);
 
@@ -54,5 +60,20 @@ public class MainMenuManager : MonoBehaviour
 
         fadeScreen.GetComponent<Fade>().FadeController(true);
         StopCoroutine(ShowMenu());
+    }
+
+// ----------------------------------------------------------------------------
+
+    private IEnumerator HideMenu()
+    {
+        while(GetComponent<RectTransform>().offsetMin.x < 1536 && _isOpen) {
+            yield return new WaitForEndOfFrame();
+        }
+
+        fadeScreen.GetComponent<Fade>().FadeController(false);
+
+        Destroy(transform.GetChild(0).gameObject);
+
+        _isOpen = false;
     }
 }
