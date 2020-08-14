@@ -181,6 +181,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4368750530290430376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6434857989558672311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8c17731d226ce409da39deeb623749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeCanvas: {fileID: 0}
 --- !u!1 &7304098483488256792
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,34 +710,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 6559635596441563053}
-    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ButtonIsPressed, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SwitchActiveButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4368750530290430376}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NewGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StartNewGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6559635596441563053}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonIsPressed, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchActiveButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
       objectReference: {fileID: 6434857989558672311}
+    - target: {fileID: 7375136748483594675, guid: 67c352c614d352b41968d5e7e79e3445,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7375136748483594684, guid: 67c352c614d352b41968d5e7e79e3445,
         type: 3}
       propertyPath: m_Name

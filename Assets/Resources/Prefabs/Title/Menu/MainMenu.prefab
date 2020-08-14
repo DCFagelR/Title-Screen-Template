@@ -121,17 +121,29 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuExtender, Assembly-CSharp
-        m_MethodName: ExtendMenu
-        m_Mode: 6
+      - m_Target: {fileID: 409678810757766420}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: CollapseButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2070484287718844401
 MonoBehaviour:
@@ -189,13 +201,14 @@ GameObject:
   - component: {fileID: 4619048161378889185}
   - component: {fileID: 4619048161378889187}
   - component: {fileID: 4619048161378889184}
+  - component: {fileID: 6568697419714630599}
   m_Layer: 5
   m_Name: MenuTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4619048161378889185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -257,6 +270,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: Menu Title
+--- !u!114 &6568697419714630599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4619048161378889190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500e4f9ffc9c345459d2db6315a27b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeSpeed: 0.1
 --- !u!1 &8445867164876485254
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeScreen: {fileID: 4716986566665515635}
+  title: {fileID: 4619048161378889190}
 --- !u!114 &8629353441527045902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +403,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1298619a08d5c4e9537bd40124c481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPrefabs: []
+  menuPrefabs:
+  - {fileID: 7643382306021360912, guid: adc70295f90db9046b1c50b2a8440cb1, type: 3}
+  - {fileID: 1123582001867033879, guid: 3bfd5385a58755446b72eaf494acd606, type: 3}
   title: {fileID: 4619048161378889190}
 --- !u!1 &8677486242728066534
 GameObject:
@@ -463,7 +492,7 @@ PrefabInstance:
     - target: {fileID: 6840913706044091121, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00,
         type: 3}
       propertyPath: m_Name
-      value: FadingCanvas
+      value: MenuTransition
       objectReference: {fileID: 0}
     - target: {fileID: 6840913706044091134, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00,
         type: 3}
@@ -569,6 +598,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840913706606022137, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840913706606022137, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6840913706606022137, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79fa0ea7b0cf3a4fa16e84e5a5d2c00, type: 3}

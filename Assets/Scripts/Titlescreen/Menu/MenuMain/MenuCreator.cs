@@ -6,7 +6,6 @@ public class MenuCreator : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    [Header("Menu Prefabs")]
     [SerializeField]
     [Tooltip("Make sure size and order match the menu buttons!")]
     private GameObject[] menuPrefabs = null;
@@ -27,6 +26,7 @@ public class MenuCreator : MonoBehaviour
         if(!title.activeInHierarchy)
         {
             title.SetActive(true);
+            title.GetComponent<TextFader>().TextFadeContoller(false);
         }
 
         ChangeTitle();

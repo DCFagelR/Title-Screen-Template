@@ -9,6 +9,7 @@ public class MainMenuManager : MonoBehaviour
     private float closedSize => transform.parent.GetComponent<MenuInitializer>().getClosedSize().x;    
 
     public GameObject fadeScreen;
+    public GameObject title;
 
     private bool _isOpen;
     private int _pressedButton;
@@ -57,6 +58,7 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator ShowMenu()
     {
+
         // Wait to finish opening menu
         while(GetComponent<RectTransform>().offsetMin.x > 0 && !_isOpen) {
             yield return new WaitForEndOfFrame();
@@ -74,12 +76,15 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator HideMenu()
     {
+        title.GetComponent<TextFader>().TextFadeContoller(true);
+
         while(GetComponent<RectTransform>().offsetMin.x < -closedSize && _isOpen) {
             yield return new WaitForEndOfFrame();
         }
 
         fadeScreen.GetComponent<Fade>().FadeController(false);
 
+        title.SetActive(false);
         Destroy(transform.GetChild(0).gameObject);
 
         _isOpen = false;
