@@ -8,6 +8,6 @@ public class StartFadeFrom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _fader.FadeController();
+        _fader.FadeController(true, true);
     }
 }

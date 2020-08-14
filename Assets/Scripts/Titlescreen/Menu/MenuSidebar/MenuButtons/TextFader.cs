@@ -38,13 +38,11 @@ public class TextFader : MonoBehaviour
                 MyText.color -= new Color(0,0,0, _fadeSpeed);
                 yield return new WaitForEndOfFrame();
             }
-            transform.parent.gameObject.SetActive(false);
         } else { // reveal
             while(MyText.color.a < 1) {
                 MyText.color += new Color(0,0,0, _fadeSpeed);
                 yield return new WaitForEndOfFrame();
             }
-            transform.parent.gameObject.SetActive(true);      
         }
 
         _isDoneFading = true;

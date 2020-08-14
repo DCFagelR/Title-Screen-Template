@@ -6,10 +6,9 @@ public class MenuCreator : MonoBehaviour
 {
 // ++Variables+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    [Header("Menu Prefabs")]
     [SerializeField]
     [Tooltip("Make sure size and order match the menu buttons!")]
-    private GameObject[] menuPrefabs;
+    private GameObject[] menuPrefabs = null;
 
     [Header("GameObjects")]
     public GameObject title;
@@ -19,14 +18,15 @@ public class MenuCreator : MonoBehaviour
 
 // ++Methods+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-    public void CreateMenu()
+    public void CreateMenu(int buttonNumber, string name)
     {
-        _currPressed = GetComponent<ActiveButtonInfo>().GetPressedNumber();
-        _titleText = GetComponent<ActiveButtonInfo>().GetPressedName();
+        _currPressed = buttonNumber;
+        _titleText = name;
 
         if(!title.activeInHierarchy)
         {
             title.SetActive(true);
+            title.GetComponent<TextFader>().TextFadeContoller(false);
         }
 
         ChangeTitle();

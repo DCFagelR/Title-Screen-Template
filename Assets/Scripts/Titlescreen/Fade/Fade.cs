@@ -12,13 +12,14 @@ public class Fade : MonoBehaviour
 
     private bool _isDoneFade = false;
 
-    public void FadeController(bool fadeFrom = true) 
+    public void FadeController(bool fadeFrom = true, bool deactivate = false) 
     {
         _isDoneFade = false;
+        gameObject.SetActive(true);
 
         if(fadeFrom) {
             StopAllCoroutines();
-            StartCoroutine(FadeFromBlack());
+            StartCoroutine(FadeFromBlack(deactivate));
         } else {
             StopAllCoroutines();
             StartCoroutine(FadeToBlack());
@@ -32,11 +33,15 @@ public class Fade : MonoBehaviour
 // ----------------------------------------------------------------------------
 
     // Black to screen
-    IEnumerator FadeFromBlack()
+    IEnumerator FadeFromBlack(bool deactivate = false)
     {
         while(canvasGroup.alpha > 0) {
             canvasGroup.alpha -= Time.deltaTime/FADE_SPEED;
             yield return null;
+        }
+
+        if(deactivate) {
+            gameObject.SetActive(false);
         }
 
         _isDoneFade = true;
